@@ -7,17 +7,15 @@ public class FlowEditor : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(
-		[
+		PublicDependencyModuleNames.AddRange(new string[] {
 			"AssetSearch",
 			"EditorSubsystem",
 			"Flow",
 			"FlowDebugger",
 			"MessageLog"
-		]);
+		});
 
-		PrivateDependencyModuleNames.AddRange(
-		[
+		PrivateDependencyModuleNames.AddRange(new string[] {
 			"AIModule", // For BlueprintNodeHelpers::DescribeProperty (could be copy/pasted out to remove editor-only dependency)
 			"ApplicationCore",
 			"AssetDefinition",
@@ -57,6 +55,6 @@ public class FlowEditor : ModuleRules
 			"SourceControl",
 			"ToolMenus",
 			"UnrealEd"
-		]);
+		});
 	}
 }

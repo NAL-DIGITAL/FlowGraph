@@ -7,19 +7,17 @@ public class FlowDebugger : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(
-		[
+		PublicDependencyModuleNames.AddRange(new string[] {
 			"Flow"
-		]);
+		});
 
-		PrivateDependencyModuleNames.AddRange(
-		[
+		PrivateDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"CoreUObject",
 			"DeveloperSettings",
 			"Engine",
 			"Slate",
 			"SlateCore",
-		]);
+		});
 	}
 }

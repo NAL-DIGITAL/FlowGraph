@@ -7,13 +7,11 @@ public class Flow : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 
-		PublicDependencyModuleNames.AddRange(
-		[
+		PublicDependencyModuleNames.AddRange(new string[] {
 			"LevelSequence"
-		]);
+		});
 
-		PrivateDependencyModuleNames.AddRange(
-		[
+		PrivateDependencyModuleNames.AddRange(new string[] {
 			"Core",
 			"CoreUObject",
 			"DeveloperSettings",
@@ -25,18 +23,17 @@ public class Flow : ModuleRules
 			"NetCore",
 			"Slate",
 			"SlateCore"
-		]);
+		});
 
 		if (target.Type == TargetType.Editor)
 		{
-			PublicDependencyModuleNames.AddRange(
-			[
+			PublicDependencyModuleNames.AddRange(new string[] {
 				"GraphEditor",
 				"MessageLog",
 				"PropertyEditor",
 				"SourceControl",
 				"UnrealEd"
-			]);
+			});
 		}
 	}
 }
